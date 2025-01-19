@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "com.example",
+        glue = "com.example", // Ensure "com.example" includes your step definitions and hooks
         plugin = {"pretty", "html:target/cucumber-reports.html"},
-        tags = ""
+        tags = "@yourTag" // Specify the tag to execute
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 }

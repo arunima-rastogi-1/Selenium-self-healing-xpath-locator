@@ -1,31 +1,23 @@
 package com.example;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 
 public class StepDefinitions {
 
-    @Given("The application is launched")
-    public void applicationLaunched() {
-        System.out.println("Application is launched");
+    @Given("the user is on the login page")
+    public void user_is_on_login_page() {
+        System.out.println("Navigated to the login page.");
     }
 
-    @Given("The user is on the login page")
-    public void userOnLoginPage() {
-        System.out.println("User is on the login page");
+    @When("the user enters valid credentials {string} and {string}")
+    public void user_enters_credentials(String username, String password) {
+        System.out.println("Entered username: " + username + ", password: " + password);
     }
 
-    @Given("The user enters a valid username and password")
-    public void enterValidCredentials() {
-        System.out.println("User enters valid credentials");
-    }
-
-    @When("The user clicks the login button")
-    public void clickLoginButton() {
-        System.out.println("User clicks the login button");
-    }
-
-    @Then("The user should see the dashboard")
-    public void verifyDashboard() {
-        System.out.println("Dashboard is displayed");
+    @Then("the user should be redirected to the homepage")
+    public void user_redirected_to_homepage() {
+        System.out.println("User successfully logged in and redirected to the homepage.");
     }
 }
