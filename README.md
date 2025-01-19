@@ -39,3 +39,16 @@ Maven
 ## Test Execution
 To execute tests using TestNG, the test runner class is configured with annotations to link feature files and step definitions.
 Reports are generated automatically after the tests are run.
+```bash
+mvn test
+```
+
+or alternatively, use the following to selectively run tags:
+
+```bash
+mvn test "-Dcucumber.filter.tags=@tag1"
+mvn test "-Dcucumber.filter.tags=@tag1 and @tag2"
+mvn test "-Dcucumber.filter.tags=@tag1 or @tag2"
+mvn test "-Dcucumber.filter.tags=not @tag2"
+mvn test "-Dcucumber.filter.tags=@tag1 and (not @tag2 or @tag3)"
+```
