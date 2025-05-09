@@ -1,12 +1,7 @@
 Feature: This is my example feature
-  @tag2 @tag1
-    Scenario: Valid Login
-    Given step1
+
   @tag1
-    Scenario: Valid Login
-    Given step2
-  @tag3
   Scenario: Valid Login
-    Given step3
+    Given As a user I test for self-healing capability in selenium
 
 
