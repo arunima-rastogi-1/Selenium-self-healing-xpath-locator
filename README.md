@@ -1,54 +1,98 @@
-# Cucumber TestNG Example
 
-This repository demonstrates how to use **Cucumber** with **TestNG** to write and run behavior-driven development (BDD) tests in a Java project. The project uses **Maven** for dependency management and build automation.
+# Self-Healing XPath Locator with Selenium, Cucumber & TestNG
 
-## Features
-- Integration of Cucumber with TestNG.
-- Example feature files and step definitions.
-- Maven-based project setup for seamless configuration.
+This project demonstrates an intelligent **self-healing XPath locator strategy** using **Selenium WebDriver**, **Cucumber**, and **TestNG**. It enables automation scripts to automatically recover from XPath failures by trying alternative locators when the primary one is broken due to changes in the DOM.
 
-## Prerequisites
-- Java 8 or higher installed.
-- Maven installed.
-- Git installed.
+---
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/arunima-rastogi-1/Cucumber-TestNG-Example.git
-   cd Cucumber-TestNG-Example```
-   
-2. Run tests:
-   ```bash
-   mvn test```
+## 🚀 Features
 
-## Project Structure
-src/main/java: Contains application code.
-src/test/java: Contains Cucumber step definitions and TestNG test runners.
-src/test/resources: Contains feature files written in Gherkin syntax.
+- ✅ Self-healing XPath logic
+- 🧪 Cucumber BDD integration
+- 🔍 TestNG for test execution and reporting
+- 📄 Page Object Model (POM) design
+- 🌐 Cross-browser test readiness
 
+---
 
-## Dependencies
-Key dependencies used in this project:
-```bash
-Cucumber
-TestNG
-Maven
+## 🛠️ Tech Stack
+
+- Java 17+
+- Selenium WebDriver
+- TestNG
+- Cucumber JVM
+- Maven
+- IntelliJ IDEA / Eclipse
+
+---
+
+## 📁 Project Structure
+
+```
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── com.example
+│   │           ├── CustomDriver.java
+│   │           └── EventFiringWebDriverExample.java
+│   └── test
+│       ├── java
+│       │   └── stepdefinitions
+│       └── resources
+│           └── features
+│               └── example.feature
+├── pom.xml
+└── testng.xml
 ```
 
-## Test Execution
-To execute tests using TestNG, the test runner class is configured with annotations to link feature files and step definitions.
-Reports are generated automatically after the tests are run.
-```bash
-mvn test
-```
+---
 
-or alternatively, use the following to selectively run tags:
+## 🧪 Running Tests
 
 ```bash
-mvn test "-Dcucumber.filter.tags=@tag1"
-mvn test "-Dcucumber.filter.tags=@tag1 and @tag2"
-mvn test "-Dcucumber.filter.tags=@tag1 or @tag2"
-mvn test "-Dcucumber.filter.tags=not @tag2"
-mvn test "-Dcucumber.filter.tags=@tag1 and (not @tag2 or @tag3)"
+# Using Maven
+mvn clean test
 ```
+
+Make sure to configure `testng.xml` and `runner` classes properly before execution.
+
+---
+
+## 🧰 How It Works
+
+1. **Custom WebDriver Wrapper** monitors failures.
+2. If the primary XPath fails, it tries alternate locators from a defined list.
+3. Logging is used to track fallback attempts and final result.
+
+---
+
+## 📝 Example XPath Healing Flow
+
+```java
+// Original XPath fails
+driver.findElement(By.xpath("//input[@id='old_id']"));
+
+// Self-healing attempts alternative
+driver.findElement(By.xpath("//input[@name='username']"));
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♀️ Author
+
+**Arunima Rastogi**  
+💼 [LinkedIn](https://www.linkedin.com/in/arunima-rastogi-1)  
+📧 [Email](mailto:your-email@example.com)
+
+---
+
+## 🌟 Contributions
+
+Contributions, issues and feature requests are welcome!  
+Feel free to fork the repo and submit a pull request.
