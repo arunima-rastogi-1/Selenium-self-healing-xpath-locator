@@ -87,7 +87,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🙋‍♀️ Author
 
 **Arunima Rastogi**  
-💼 [LinkedIn](https://www.linkedin.com/in/arunima-rastogi)  
+💼 [LinkedIn](https://www.linkedin.com/in/arunimarastogi)  
 📧 [Email](mailto:e.arunimarastogi@gmail.com)
 
 ---
