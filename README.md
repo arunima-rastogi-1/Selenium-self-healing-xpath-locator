@@ -3,7 +3,7 @@
 
 This project demonstrates an intelligent **self-healing XPath locator strategy** using **Selenium WebDriver**, **Cucumber**, and **TestNG**. It enables automation scripts to automatically recover from XPath failures by trying alternative locators when the primary one is broken due to changes in the DOM.
 
----
+--- 
  
 ## 🚀 Features
 
