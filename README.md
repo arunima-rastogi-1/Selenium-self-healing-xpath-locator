@@ -5,7 +5,7 @@ This project demonstrates an intelligent **self-healing XPath locator strategy**
   
 ---   
    
-## 🚀 Features 
+## 🚀 Features  
 
 - ✅ Self-healing XPath logic
 - 🧪 Cucumber BDD integration
